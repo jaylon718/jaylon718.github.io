@@ -1,0 +1,23 @@
+why需要分布式全局唯一ID以及分布式ID的业务需求?
+（在复杂的分布式系统中，需要对大量的数据和消息进行唯一标识）
+
+几种通用方案？
+  UUID：
+    -缺点：无序;  36位UUID不适合做db的主键; 索引会导致B+树索引的分裂;
+    
+  db主键自增：
+    - 高并发集群上此策略不可用
+    
+  基于redis 生成的全局ID策略：
+    - 
+    
+  snowflake(雪花算法)
+    - springboot 整合雪花算法
+      <dependency> 
+        <groupId>cn.hutool</groupId> 
+        <artifactId>hutool-all</artifactId> 
+        <version>5.4.2</version> 
+      </dependency> 
+    - 
+  
+        
